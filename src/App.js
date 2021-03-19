@@ -1,16 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-import Weather from "./Weather";
+import Container from "./Container";
+
+import "./styles.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Hello world</h1>
-       <Weather city="Lisbon"/>
-      </header>
+      <Container />
     </div>
   );
 }
+
 
 export default App;
