@@ -1,11 +1,11 @@
-import Container from "./Container";
+import React from "react";
 
-import "./styles.css";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Container />
+      Weather App
       <footer>
         This project was coded by Joana Matias and is open-sourced
      <a
