@@ -6,14 +6,14 @@ function App() {
   return (
     <div className="App">
       Weather App
-      <footer>
+      <p>
         This project was coded by Joana Matias and is open-source 
      <a
        href="https://github.com/JoanaSMatias/react-weather-app"
        target="_blank">
          open-sourced on GitHub
      </a>
-      </footer>
+      </p>
     </div>
   );
 }
