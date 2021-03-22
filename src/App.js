@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       Weather App
       <footer>
-        This project was coded by Joana Matias and is open-sourced
+        This project was coded by Joana Matias and is open-source 
      <a
        href="https://github.com/JoanaSMatias/react-weather-app"
        target="_blank">
