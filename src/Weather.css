@@ -1,0 +1,121 @@
+.Weather {
+  border: 3px solid #f2415b;
+  width: 750px;
+  height: 750px;
+  margin: 100px auto;
+  text-align: center;
+  display: block;
+  box-shadow: 9px 9px 30px rgb(74, 81, 89, 0.5);
+  border-radius: 5%;
+}
+
+.Weather h1 {
+  font-size: 50px;
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 50px;
+  color: #455a64;
+}
+
+.Weather .time {
+  border: 2px dotted #214252;
+  padding: 5px 10px;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-size: 13px;
+  max-width: 300px;
+  position: relative;
+  top: 10px;
+}
+
+.Weather h2 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #455a64;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.Weather .form-control {
+  position: relative;
+  top: 25px;
+  left: 100px;
+  border: 3px solid #ff7f50;
+  border-radius: 5px;
+  padding: 15px 50px;
+  box-shadow: 2px 2px 5px rgb(33, 66, 82, 0.5);
+  display: inline-block;
+  outline: none;
+  text-align: center;
+}
+
+::placeholder {
+  color: #9ad3bc;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  text-shadow: 0.8px 0.8px #6f9686;
+}
+
+.Weather .btn {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+}
+
+#cityDescriptionContainer {
+  margin: 15px auto;
+}
+
+#descriptionBox {
+  border: 1px dashed #12726c;
+  padding-right: 110px;
+  max-height: 90px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+#degrees {
+  font-size: 45px;
+  font-weight: bold;
+  color: #87a4b2;
+  text-shadow: 2px 2px #455a64;
+}
+
+img {
+  position: relative;
+  bottom: 10px;
+  left: 10px;
+  width: 70px;
+}
+
+#metricButton1 {
+  position: relative;
+  bottom: 15px;
+  right: 5px;
+}
+
+#metricButton2 {
+  position: relative;
+  bottom: 15px;
+  right: 10px;
+}
+
+#metric {
+  font-size: 10px;
+}
+#descriptionWeather {
+  font-size: 11px;
+  color: #455a64;
+  display: relative;
+  left: 135px;
+  bottom: 90px;
+}
+
+#weatherResume {
+  font-style: italic;
+  font-size: 16px;
+  color: #455a64;
+  font-weight: bold;
+}
