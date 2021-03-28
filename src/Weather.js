@@ -1,10 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Weather.css";
-export default function Weather(){
+import axios from "axios";
+
+export default function Weather(props){
+const [weatherData, setWeatherData] = useState ({ready: false});
+function handleResponse (response) {
+  setWeatherData({
+    ready: true,
+    temperature:response.data.main.temp,
+    description:response.data.weather[0].main,
+    humidity: response.data.main.humidity,
+    wind: response.data.wind.speed,
+    city:response.data.name,
+    iconUrl: "",
+    iconDescription: response.data.weather[0].main,
+    date: response.data.dt * 1000
+  });
+}
+
+if (weatherData.ready) {
   return(
     <div className="Weather">
       <h1>Weather App</h1>
-      <h3 className="time">Friday</h3>
+      <h3 className="time">{weatherData.date}</h3>
       <form>
         <div className="row">
           <div className="col-9">
@@ -30,14 +48,14 @@ export default function Weather(){
           <div className="row justify-content-md-center">
             <div className="col-sx"></div>
               <div className="col-md-auto">
-                <h2>Lisbon</h2>
+                <h2>{weatherData.city}</h2>
               </div>
               <span id="descriptionBox">
                 <div className="col-md-auto">
-                  <span id="degrees">11ºC</span>
+                  <span id="degrees">{Math.round (weatherData.temperature)}ºC</span>
                   <img
-                    src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-                    alt="Sunny"
+                    src={weatherData.iconUrl}
+                    alt={weatherData.iconDescription}
                   /> 
                 </div>
                 <div className="form-check form-check-inline" id="metricButton1">
@@ -70,17 +88,26 @@ export default function Weather(){
                   </label>
                 </div>
                 <div class="col" id="descriptionWeather">
-                    <span id="weatherResume">Cloudy</span>
+                    <span id="weatherResume">{weatherData.description}</span>
                   <div class="col col-sx-2"></div>
                     <span id="humidity"></span>
-                    <span id="percentageOfHumidity">Humidity: 72%</span>
+                    <span id="percentageOfHumidity">Humidity: {weatherData.humidity}%</span>
                    <div class="col col-sx-2"></div>
                     <span id="windSpeed"></span>
-                    <span id="speed">Wind: 13 km/H</span>
+                    <span id="speed">Wind: {weatherData.wind}Km/H</span>
                 </div>
               </span>
           </div>
         </div>    
      </div>                   
-  )  
+  )
+}
+else {
+ let apiKey = "ccd7e3ef34f8befeaea04a6b52aa4224";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(handleResponse);
+  return "Loading...";
+
+}  
 }
