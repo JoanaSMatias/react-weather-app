@@ -16,7 +16,7 @@ function handleResponse (response) {
     humidity: response.data.main.humidity,
     wind: response.data.wind.speed,
     city:response.data.name,
-    iconUrl: "",
+    iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].main}@2x.png`,
     iconDescription: response.data.weather[0].main,
     date: new Date (response.data.dt * 1000)
   });
