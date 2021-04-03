@@ -86,20 +86,20 @@
 img {
   position: relative;
   bottom: 10px;
-  left: 10px;
-  width: 70px;
+  left: 1px;
+  width: 85px;
 }
 
 #metricButton1 {
   position: relative;
-  bottom: 15px;
-  right: 5px;
+  bottom: 30px;
+  right: 15px;
 }
 
 #metricButton2 {
   position: relative;
-  bottom: 15px;
-  right: 10px;
+  bottom: 30px;
+  right: 20px;
 }
 
 #metric {
@@ -109,8 +109,8 @@ img {
   font-size: 11px;
   color: #455a64;
   display: relative;
-  left: 135px;
-  bottom: 90px;
+  left: 150px;
+  bottom: 95px;
 }
 
 #weatherResume {
