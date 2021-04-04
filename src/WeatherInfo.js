@@ -1,4 +1,6 @@
 import React from "react";
+import WeatherIcon from "./WeatherIcon"
+import WeatherMetric from "./WeatherMetric"
 
 export default function WeatherInfo(props){
     return (
@@ -11,47 +13,15 @@ export default function WeatherInfo(props){
               </div>
               <span id="descriptionBox">
                 <div className="col-md-auto">
-                  <span id="degrees">{Math.round (props.data.temperature)}ºC</span>
-                  <img
-                    src={props.data.iconUrl}
-                    alt={props.data.iconDescription}
-                  /> 
+                  <WeatherIcon code={props.data.icon} />
                 </div>
-                <div className="form-check form-check-inline" id="metricButton1">
-                  <input 
-                    className="form-check-input" 
-                    type="radio" 
-                    name="inlineRadioOptions" 
-                    id="inlineRadio1" 
-                    value="option1" 
-                    checked/>
-                  <label 
-                    id="metric" 
-                    className="form-check-label" 
-                    for="inlineRadio1">
-                      Celcius
-                  </label>
-                </div>
-                <div className="form-check form-check-inline" id="metricButton2">
-                  <input 
-                    clasName="form-check-input" 
-                    type="radio" 
-                    name="inlineRadioOptions" 
-                    id="inlineRadio2" 
-                    value="option2"/>
-                  <label
-                    id="metric"
-                    className="form-check-label"
-                    for="inlineRadio2">
-                      Fahrenheit 
-                  </label>
-                </div>
-                <div class="col" id="descriptionWeather">
+                <WeatherMetric celsius = {props.data.temperature}/>
+                <div className="col" id="descriptionWeather">
                     <span id="weatherResume">{props.data.description}</span>
-                  <div class="col col-sx-2"></div>
+                  <div className="col col-sx-2"></div>
                     <span id="humidity"></span>
                     <span id="percentageOfHumidity">Humidity: {props.data.humidity}%</span>
-                   <div class="col col-sx-2"></div>
+                   <div className="col col-sx-2"></div>
                     <span id="windSpeed"></span>
                     <span id="speed">Wind: {props.data.wind}Km/H</span>
                 </div>
