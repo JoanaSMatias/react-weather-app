@@ -18,7 +18,7 @@ return (
     <div className = "WeatherUnit">
     <span id="degrees">{Math.round (props.celsius)}ºC</span>
   <span id="unit">ºC | {" "}
-  <a href="/" onClick={convertToFahrenheit}>ºF</a>
+  <span href="/" onClick={convertToFahrenheit}>ºF</span>
    </span> </div>
 )} else {
       let fahrenheit = (props.celsius * (9 / 5) + 32);
@@ -26,7 +26,7 @@ return (
         <div className = "WeatherUnit">
         <span id="degrees">{Math.round(fahrenheit)}ºF</span>
         <span id="unit">
-  <a href="/" onClick={convertToCelsius}>ºC</a>
+  <span href="/" onClick={convertToCelsius}>ºC</span>
   {" "} | ºF
    </span> 
    </div>
