@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 
 export default function FormattedDate(props){
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -11,7 +11,7 @@ export default function FormattedDate(props){
                 minutes=`0${minutes}`;
     let date = props.date.getDate()
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    let month = months [props.date.getMonth ()];
+    let month = months [props.date.getMonth()];
 
 return<div> Last updated: {date} of {month}, {hours}:{minutes}, {day}</div>;
 }

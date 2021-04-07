@@ -12,6 +12,7 @@ function App() {
           <a
             href="https://www.linkedin.com/in/joana-sofia-matias-a4206711b/"
             target="_blank"
+            rel="noreferrer"
           >
         Joana Matias
           </a>{" "}
