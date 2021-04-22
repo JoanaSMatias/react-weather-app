@@ -13,7 +13,7 @@ export default function WeatherInfo(props){
             </div>
             <span id="descriptionBox">
               <div className="col-md-auto">
-                <WeatherIcon code={props.data.icon} />
+                <WeatherIcon code={props.data.icon} className="WeatherIcon" size={65}/>
               </div>
               <WeatherMetric celsius = {props.data.temperature}/>
                 <div className="col" id="descriptionWeather">

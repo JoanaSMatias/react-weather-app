@@ -86,10 +86,10 @@
   left: 10px;
 }
 
-.Weather canvas {
+.WeatherInfo canvas {
   position: relative;
   top: 10px;
-  left: 85px;
+  left: 80px;
 }
 #unit {
   position: relative;
